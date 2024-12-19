@@ -88,7 +88,7 @@
 <td>300</td>
 </tr>
 </table>   
-
+ 
 <h6>Sąrašai</h6>
 <ul>
     Rikiuotas
@@ -109,15 +109,15 @@
 </ol>
 
 <p><form>
-    <input type="text" placeholder="Vartotojo vardas"><br>
-    <input type="text" placeholder="Slaptažodis"><br>
+    <input type="text" placeholder="Vartotojo vardas" required><br>
+    <input type="password" placeholder="Slaptažodis"required><br>
       <input type="submit"value="Prisijungti">
 </form></p>
 
 <p><form>
-    <input type="text" placeholder="Jūsų vardas"><br>
-    <input type="text" placeholder="El. pasto adresas"><br>
-    <input type="text" placeholder="Žinutės tema"><br>
+    <input type="text" placeholder="Jūsų vardas"required><br>
+    <input type="email" placeholder="El. pasto adresas"required><br>
+    <input type="text" placeholder="Žinutės tema"required><br>
     <textarea cols="19" rows="2"> Žinutė</textarea> <br>
     <input type="submit"value="Siųsti žinutę">
 </form></p>
@@ -126,10 +126,13 @@
     <input type="text" placeholder="Vardas"><br>
     <input type="text" placeholder="El. pasto adresas"><br>
     <input type="text" placeholder="El. pašto adresas dar kartą"><br>
+    <textarea rows="2"cols="2"></textarea> Textas
     <textarea cols="19" rows="4"> Aprašymas apie save</textarea> <br>
     <input type="radio"name="lytis" value="moteris"> <b>Moteris</b>
     <input type="radio"name="lytis" value="vyras"> <b>Vyras</b> <br>
     <input type="submit"value="registruotis">
+    <br>
+    <br>
 </form></p>
 
 <p><form>
@@ -138,6 +141,22 @@
     <label for="PavardėID">Pavardė</label>
     <input type="text" id="vardasID"><br>
      <input type="submit"value="Patvirtinti">
+</form></p>
+<br>
+
+
+
+<p><form>
+    <b>JŪS ESATE</b><br>
+
+    <input type="radio"name="lytis" > <b>Moteris</b>
+    <input type="radio"name="lytis" > <b>Vyras</b> <br>
+    <input type="radio"name="lytis" > <b>Katinas</b>
+    <input type="radio"name="lytis" > <b>Šuo</b> <br>
+    <input type="radio"name="lytis" > <b>Kitas augintinis</b><br>
+    <input type="submit"value="registruotis">
+    <br>
+    <br> <input type="range" ><br>
 </form></p>
 
 </body>
