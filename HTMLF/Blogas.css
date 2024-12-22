@@ -18,7 +18,7 @@ background-size: cover;}
 
         // <uniquifier>: Use a unique and descriptive class name
 
-.agu-display-<uniquifier> {
+agu-display-<uniquifier> {
   font-family: "Agu Display", serif;
   font-optical-sizing: auto;
   font-weight: 400;
