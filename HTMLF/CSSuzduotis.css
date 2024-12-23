@@ -1,7 +1,29 @@
 body{background-color: rgb(241, 222, 134);}
 td.spalva{background-color: rgb(240, 149, 30);}
 input.spalva{background-color: rgb(241, 222, 134);}
-h1, h2{color: rgb(119, 119, 119);}
+h1, h2{font-weight:100: rgb(119, 119, 119);}
 h2.spalva{color: darkgreen;}
-li:nth-child(2){color: red;}
-0li:nth-child(2){color: rgb(0, 255, 242);}
+ li:nth-child(2){color: red;} 
+.saraso-elementai li:nth-child(3){color: brown;}
+img{height:110px;
+width: 180px;}
+
+table{border-bottom:  2px solid red;
+border-collapse: collapse;}
+
+ul {list-style-type:square;}
+.saraso-elementai ul{list-style-type:none;}
+
+ul li::before{
+    content:'\2661'
+}
+
+
+
+body {
+  font-family: "Agu Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: italic;
+
+}
