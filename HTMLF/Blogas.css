@@ -1,7 +1,7 @@
 body{
     background:#f2e9d8
 }
-hi,h2 {color: rgba(0,0,0,0.4)
+hi,h2 {color: rgba(0,0,0,0.6)
 }
 body > table {background-image: url(Pic/untitled.jpg);
     background-repeat: no-repeat ;
@@ -13,18 +13,19 @@ background-size: cover;}
         }
         a {color:#ed0a3f }
         a:hover {color: #2d383a;} 
-
-
-
-        // <uniquifier>: Use a unique and descriptive class name
-
-agu-display-<uniquifier> {
+td.spalva {background-color: rgba(0,0,0,0.6) 
+}
+p.balta{color:white
+}
+p#pirmas-paragrafas{color:rgba(25, 250, 36, 0.76)
+}
+     
+.agu-display-800{
   font-family: "Agu Display", serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 800;
   font-style: normal;
-  font-variation-settings:
-    "MORF" 0;
+
 }
 
         

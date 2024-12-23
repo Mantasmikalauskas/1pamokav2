@@ -4,29 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="CSSuzduotis.css"/>
 </head>
 <body>
-    <table border="5" width="800"> 
+    <table border="1" > 
     <tr>
-        <td colspan="3">
-            <h1>Navigacija</h1>
-            <nav>
+        <td colspan="3" class="spalva">
+            <h1 style="text-align: center;">Navigacija</h1>
+            <nav style="text-align: center;">
                 <a href="#">Pradžia</a> 
-                <a href="#">Pradžia</a>
-                <a href="#">Pradžia</a>
+                <a href="#">Apie</a>
+                <a href="#">Kontaktai</a>
+                <a href="#">Dienoraštis</a>
             </nav>
         </td>
     </tr>
     <tr>
-        <td>999        
+        <td>
+            <table >
+                <tr>
+                    <td>
+                        <h2>Prisijungimas</h2>
+                        <form>
+                            <label for="vardasID">Vartotojo vardas:</label><br>
+                            <input type="text" id="vardasID" class="spalva"><br>
+                            <label for="SlaptažodisID">Slaptažodis:</label><br>
+                            <input type="password" id="SlaptažodisID" class="spalva">
+                            <br><br>
+                            <input type="submit"value="Prisijungti" class="spalva">
+                        </form><hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Naujausios <br>Naujienos</h2><br>
+                        <ul>
+                            <li>Naujiena 1</li>
+                            <li>Naujiena 2</li>
+                            <li>Naujiena 3</li>
+                        </ul>
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Apklausa</h2>
+                        <p>Ar jums patinka mūsų <br>svetainė? </p>
+                        <form>
+                             <input type="radio"name="taip-ne" > Taip<br>
+                             <input type="radio"name="taip-ne" > Ne <br>
+                             <input type="submit"value="balsuoti" class="spalva">
+                        </form>
+                        </td>
+                </tr> 
+                
+            </table>       
         </td>
-        <td>999        
+        <td><h1>Straipsniai</h1> 
+            <h2 class="spalva">Straipsnis 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>   
+            <h2 class="spalva">Straipsnis 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>   
+            <h2 class="spalva">Straipsnis 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>      
         </td>
-        <td>999        
+        <td>
+            <table>
+                <tr>
+                    <td>
+                        <h2>Populiarūs <br>įrašai</h2>
+                        <ol class="aa">
+                            <li>Įrašas 1</li>
+                            <li>Įrašas 2</li>
+                            <li>Įrašas 3</li>
+                        </ol>
+                        <hr>
+                    </td> 
+                </tr>
+                <tr>
+                     <td>
+                        <h2>Galerija</h2>
+                        <img src="Pic/bmw30.jpg" alt="pict" width="150"><br>
+                        <img src="Pic/bmw30.jpg" alt="pict" width="150">
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Prenumerata</h2>
+                        <form>
+                            <label for="elpastasID">El. paštas: <br>
+                                <input type="text" class="spalva"><br>
+                                <br>
+                                <input type="submit" value="prenumeruoti" class="spalva">
+
+
+                            </label>
+                        </form>
+                   
+                    </td>
+                    
+                </tr>
+
+            </table>       
         </td>
     </tr>
     <tr>
-        <td colspan="3">Kaunas</td>
+        <td colspan="3" class="spalva"> <p style="text-align: center;">© 2024 Mano svetainė. Visos teisės saugomos.</p>
+            
+        </td>
     </tr>
 
     
