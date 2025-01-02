@@ -12,7 +12,9 @@ table{border-bottom:  2px solid red;
 border-collapse: collapse;}
 
 ul {list-style-type:square;}
-.saraso-elementai ul{list-style-type:none;}
+
+.saraso-elementai {list-style-type:none;}
+ol {list-style-type:upper-roman;}
 
 ul li::before{
     content:'\2661'

@@ -1,0 +1,67 @@
+body{background-color: rgb(241, 222, 134);}
+div{background-color: rgb(134, 211, 241);
+max-width: 80%;
+margin: 80px;}
+
+div#pirmas{border: 12px solid red; 
+    padding: 5em;
+    box-shadow:5px 5px 15px black;}
+
+
+div#antras{border-radius:150px; 
+    padding:5em;
+    box-shadow:0 0 50px black,
+    0 0 50px rgb(160, 11, 11);}
+
+div#trecias{border-bottom: 10px solid red;
+    border-right: 15px dashed red;
+    
+    padding: 5em 0;}
+div#ketvirtas{padding:5em 5em;
+
+}
+div#penktas{border: 5px solid red; padding:3em 3em;
+
+}
+
+#penktas li{display: inline;}
+
+#penktas form{;
+margin-top: 10px;}
+
+#penktas form input{width: 200px;
+    display: block;
+margin-top: 10px;}
+
+box-s
+
+
+
+
+
+
+
+
+
+
+
+ul.sarasas{
+    list-style-type: none;
+    padding: 0;
+    text-align: justify;
+}
+
+ul.sarasas>li::before{
+   content: '\2664';
+   color: aqua;
+}
+ul.sarasas{
+    border: 5px solid red;
+    padding: 20px;
+    text-align: justify;
+}
+
+    text-align: center;
+
+
+
