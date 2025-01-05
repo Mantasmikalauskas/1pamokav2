@@ -1,0 +1,26 @@
+#pirmas p,
+#pirmas a 
+    {font-size: 20px;
+}
+
+#pirmas p mark:hover {
+   position: relative;
+   bottom: 10px; 
+}
+
+#pirmas a:hover {
+    position: relative;
+    left: 20px;
+}
+
+#virsus-b a {
+    background-color: rgb(212, 42, 12);
+    padding: 10px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+
