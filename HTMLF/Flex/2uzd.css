@@ -1,0 +1,79 @@
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.flex-column > div:first-child {
+    display: flex;
+    background: orange; 
+    padding: 15px;  
+}
+.flex-column > div:first-child p {
+    background: white;
+    height: 200px;
+    width: 20%;  
+}
+
+
+.flex-column > div:nth-child(2){
+    display: flex;
+    justify-content: flex-end;
+    background: rgb(142, 201, 142); 
+    padding: 10px;    
+}
+.flex-column > div:nth-child(2) p {
+    background: white;
+    height: 200px;
+    width: 20%;  
+}
+
+
+.flex-column > div:nth-child(3) {
+    display: flex;
+    background: rgb(255, 123, 0); 
+    height: 200px;
+    padding: 15px;
+    align-items: center;
+    /* justify-content: flex-start;   */
+}
+.flex-column > div:nth-child(3) p {
+    background: white;
+    /* height: 120px; */
+    width: 20%;  
+    padding: 10px;
+}
+
+
+.flex-column > div:nth-child(4){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(15, 240, 240); 
+    height: 200px;
+    padding: 40px;    
+}
+.flex-column > div:nth-child(4) p {
+    background: white;
+    /* height: 200px; */
+    width: 20%;  
+    padding: 10px;
+}
+
+
+.flex-column > div:nth-child(5){
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background: rgb(226, 29, 95); 
+    height: 200px;
+    padding: 40px;    
+}
+.flex-column > div:nth-child(5) p {
+    background: white;
+    /* height: 200px; */
+    width: 20%;  
+    padding: 10px;
+ 
+
+}
