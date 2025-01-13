@@ -2,80 +2,76 @@
  body{
     /* background-image: url(Uzduotispic.jpg)   */
  }
- 
+ .containernav button {
+background-color: #FF6978;
+border: none;
+color: white
+;
+ }
+
+
  
  .container1{
-    display: flex;
+   background-color: #FFEEE2;
+   width: 100%;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-top: 100px;
     padding-bottom: 100px;
     background-image: url(Rectangle.png);
-    height: 800px;
+    height: 800px; */
     /* width: auto; */
     /* margin: auto; */
     /* border: 3px solid #73AD21; */
  }
-
- .container1 p{
-    color: white;
- }
- .container1 h1{
-    color: white;
- }
-  .container1 button { 
-    background-color: rgb(44, 214, 44);
-    color:white;
-    border-radius: 2px;
-    border: 0;
-    padding: 5px 25px;
-  }
-
-  .container2{
-   /* display: flex;
-   flex-direction: column; */ */
-   /* align-items: center;
-   justify-content: center; */
-   /* padding-top: 100px;
-   padding-bottom: 100px; */ */
-  
-   /* height: 800px; */
-   /* width: auto; */
-   /* margin: 10px; */
-   /* border: none */
-}
-.container2 .card {
+.container1 button{
+   background-color: #FF6978;
    border: none;
+   border-radius: 6px; 
+   color: white;
+}
+.container1 img{
+   width: 100%;
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+}
+.container2{
+   /* background-color: #FFEEE2; */
+   width: 100%;
+ 
  }
+.container2 button{
+   background-color: #FF6978;
+   border: none;
+   border-radius: 6px; 
+   color: white;
+}
+.container2 img{
+   width: 100%;
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;}
 
-  .container3{
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 100px;
-    padding-bottom: 100px; */
-    background-color: #F1F8FF;
-    /* height: 800px; */
-    /* width: auto; */
-    margin: 0 auto;
-    /* border: 3px solid #73AD21; */
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 23px;
-    text-align: center;
- }
- .container3 h2{
-   margin-top: 100px;
- }
- .container3 iframe{
-width: 100%;
-max-width: 750px;
-height: 450px;
-margin-top: 40px;
- }
+
+   .container3{
+      /* background-color: #FFEEE2; */
+      width: 100%;
+    
+    }
+   .container3 button{
+      background-color: #FF6978;
+      border: none;
+      border-radius: 6px; 
+      color: white;
+   }
+   .container3 img{
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;}
+
+
+ 
 
  .container4{
     /* display: flex;
