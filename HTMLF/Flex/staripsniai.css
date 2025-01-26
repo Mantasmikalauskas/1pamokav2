@@ -1,0 +1,105 @@
+body{
+margin: 0;
+font-size: 16px;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header{
+background: black;
+color: white;
+display: flex;
+justify-content: space-between;
+padding: 10px 5px;
+}
+header nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+header nav ul li {
+    display: inline-block;
+}
+header nav ul li a{
+    color: white;
+    text-transform: lowercase;
+    text-decoration: none;
+    margin: 0 5px;
+}
+header .logo{
+font-weight: bold;
+}
+
+.hero{
+    background: rgb(161, 247, 161);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.hero button{
+    background: rgb(65, 65, 65);
+    color: white;
+    padding: 7px 15px;
+    border: 2px solid rgb(71, 71, 71);
+}
+.hero button:last-child{
+    background: none;
+    color: rgb(61, 61, 61);
+}
+
+.zydras{
+    background: rgb(146, 248, 226);
+    height: 80px;
+    display: flex;
+    padding: 0 20px;
+    /* justify-content:center ; */
+    align-items: center;
+}
+.straipsniai{
+    background: rgb(253, 242, 177);
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    flex-wrap: wrap;
+    
+}
+.straipsniai > div{
+    background: antiquewhite;
+    width: calc(33.33% - 40px);
+    padding: 10px;
+}
+
+.footeris{
+    background: rgb(39, 39, 39);
+    display: flex;
+    gap: 30px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+.footeris > div{
+
+    width: calc(33.33% - 40px);
+    padding: 10px;
+    text-align: justify;
+    color: white;   
+}
+.footeris > div a{
+    color: rgb(75, 242, 248);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+   header{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+   } 
+   .straipsniai > div,
+   .footeris > div {
+    width: calc(100% - 40px);
+   }
+}

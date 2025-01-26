@@ -9,7 +9,9 @@ color: white
 ;
  }
 
-
+.card{
+ border: none;  
+} 
  
  .container1{
    background-color: #FFEEE2;
@@ -50,8 +52,7 @@ color: white
 }
 .container2 img{
    width: 100%;
-   border-top-left-radius: 10px;
-   border-bottom-left-radius: 10px;}
+}
 
 
    .container3{
