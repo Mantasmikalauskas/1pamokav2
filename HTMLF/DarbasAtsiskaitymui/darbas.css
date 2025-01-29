@@ -1,0 +1,72 @@
+html,
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.hero{
+  background-image: url(https://s3-alpha-sig.figma.com/img/4c1e/67ad/617529b242ecae3c1c15bb1de79f5875?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lFR8KAB3S-3GmzF5omVLuoM1HzAwEM6h0jonLSoFuSpCKTDGuHaMY~sibz9rSXzhtFyMdt74WCL33Wd1q-3LxDM9l4U6XJwrW6y3oYIv33rKsbcN7ApaxfbXdOvV1rNh8I-45XQ3ZOmrQ-4JF0jkgaGMulUPT7DwA6-7J5f~mOXpPwKH3qv2l8US1UYToSqVdqVe9bMaLhbpJwo4OsZblHaJuYu3SzvoUcQNW34o-Lqe3CBtiRNnxiwXN7A~R9de4vbJ89JmzyJFr3KREqcXcLpwUK~Hoj7VcMz6-IyKZgGNj8pGldDKrcRUBLvFg3r3nXVT8cmmpi5-emgY5zNcvw__);
+height: 800px;
+   }
+   .hero .navi .logo{
+    position: absolute; top: 30px; left: 90px;
+   }
+   .hero .navi .nuor {
+   position: absolute; top: 30px; right: 90px;
+   }
+   .hero .navi .nuor a{
+    color: white;
+    padding: 50px;
+   }
+   .hero .navi button {
+    background: rgb(57, 57, 226, 0.4);
+    border: none;
+   }
+   .hero .vidus{
+    color: white;
+    background: none; width: 563px; height: 198px; position: absolute; left: 100px; top: 300px;
+   }
+   .hero .vidus button{
+    background-color: rgb(97, 97, 248);
+    border: none;
+    color: white;
+   }
+
+
+   .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding-top: 100px;
+    
+  
+   }
+
+   .container .tekstas {
+    width: 350px;
+    padding-bottom: 20px;
+   }
+   .container .tekstas p{
+    padding-bottom: 20px;
+   }
+   .container .foto{
+    width: 350px;
+   }
+
+   .people{
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+   }
+
+   .rev{
+    display: flex;
+    width: 30%;
+    padding-left: 100px;
+   }
+   .rev .stars{
+    padding: 100px 0 40px 0;
+   }
+   .rev p{
+    padding-bottom: 30px;
+   }
