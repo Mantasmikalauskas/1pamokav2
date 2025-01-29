@@ -1,0 +1,139 @@
+html,
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container-header{
+    background-image: url(https://s3-alpha-sig.figma.com/img/ac14/319a/0cad7c4bb9927f868bc902ef087041c0?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=J4qocA79G62-H2~MDcAGiHyjF4MHCopn-xMmdfcNOFN2ShhPVeFE~U4VcTSdgt6JpHV~w4imbOeSdTDFPUN6ejm7n7oo88opJhEaDNpFhOOTlezPxG~7gR68dvqRmojfi0lvZW~~r3KHWTN457J8q0rfr57r-ZDuFmpyFs0YRCBrKZ8OFQZaKFeQU-ZtaVtL8frrXNdkNiINBN7AaT3dVc~DuVurHMc2V~vwEzyHF4z3pRU0BVA2PRlS13-Lt6XrPn7-oUYjirm0gprHUr7GeuTI3Tzo2myPdnhA8QCmBPLb~JSPBqAcqcCpa396srG44bx1tUC99-JbG0vACa8r4A__);
+    padding: 20px;
+    height: 600px
+}
+
+.container-header .navi ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    justify-content: right;
+/* justify-content: center; */
+}
+
+.container-header .navi img{
+    width: 79px;
+}
+.container-header .navi button{
+    background-color: transparent;
+    border: 0;
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; */
+}
+
+.container-header .welcome {
+    margin: 0;
+    padding: 300px 0 0 20px;
+    width: 600px;
+    color: white;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items:flex-start;
+    justify-content:flex-end;
+/* justify-content: center; */
+}
+.container{
+    margin: 0 auto;
+    background-color: #EF5D69;
+    height: 498px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container .sviesus{
+   
+    background-color: rgba(255, 255, 255, 0.75) !important;
+    background-blend-mode: lighten;
+    height: 262px;
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    padding: 50px;
+
+}
+.container .sviesus > div p{
+    
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding: 20px;
+}
+.container-1 .sviesus2 {
+    
+    height: 800px;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ebbbbf;
+    gap: 80px;
+   
+
+}
+.container-1 .sviesus2 .text {
+background: white;
+border-radius: 10px;
+height: 484px;
+width: 20%;
+/* padding: 30px; */
+}
+
+.container-1 .sviesus2 .text p {
+    padding: 30px;
+}
+
+.container-1 .sviesus2 .foto img {
+    background-image: url(https://s3-alpha-sig.figma.com/img/0215/1109/7de43bb506dca65c44b936b9d5b3a5d4?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IEtvFddsiK6aEGLLjGRHxj5f2~uB4Q6oWMt8BJHH26vaLHJ2CjQjpPUp~vQYPEixFqvVJU4kkwrrSiFWTAV~BYj9F4NF0CvRmkBrvL~G-bgR87-i5DOcw5C6FkmwJjqr0dMTo8800z~NL3udZnVPrja6h1s0RvnvolzwHSt7BSbWntrmyHy-zx~4z5OLcj2JKf8GG-FvrSoQvBvUvrXPw5Fhx7qCjhid3YYQrOXQzYwi79k9JVOUmJuSI7Ttll3M-FY65vqcyFuqztijeAq~CLIxHN4HlI1gcz0IIlRazFP2B~zIbSR2Yj328IVESm1q0fmPz30xOgadEma~cyBP~A__);
+    border-radius: 10px;
+    height: 484px;
+    width: 100%;
+    }
+
+.container-footer {
+    background: rgb(29, 29, 29);
+    display: flex;
+    
+
+}
+.container-footer .media ul {
+    /* margin: 0; */
+    /* padding: 10px; */
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    
+    /* justify-content:flex-end; */
+    align-items:center;
+    /* justify-content: right; */
+/* justify-content: center; */
+}
+.container-footer .media ul li{
+    padding: 10px;
+}
+
+.container-footer .logo{
+    /* margin: 0;
+    padding: 10px; */
+    /* background: red; */
+    display: flex;
+    list-style-type: none;
+    
+    align-items:center;
+    /* justify-content: right; */
+/* justify-content: center; */
+}

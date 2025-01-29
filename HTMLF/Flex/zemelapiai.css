@@ -1,0 +1,74 @@
+html,
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.navi{
+    display: flex;
+    justify-content: space-between;
+    padding:0 200px 0 200px ;
+}
+.navi .logo{
+    padding: 30px;
+}
+.navi .nuor ul {
+    display: flex;
+    list-style-type: none;
+    /* padding: 15px; */
+    /* justify-content: end; */
+    /* flex-direction: row; */
+}
+.navi .nuor ul li{
+    padding: 15px;
+}
+.container-atrask{
+ height: 1000px;
+    background-image: url(https://s3-alpha-sig.figma.com/img/3b43/b3ba/9fe8a2f8cbf05ee6d21002fe5d546eec?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HZYBNbRYnVHnaSPGG3TcSCC8cxeqHaVXHUonnfiyy2li~HfGrf3-2gYLQPdI7nNzol4IAZSFvZnJfwuCwixLsR0XGpptgTdEfk9TfxJ2XnEgFx15G7bLZx5I6VqvpMFQY4dOtjElYB56vAfAgM9PZRZtc67dgWE8xSmJIBe~XpCgCuTPDkiwV7pGugiNamtw4KhjoWIjZ7vNwgTt37zI8nJB7Tl~Wj2qLxjENhP~xV~CcAlBvjKy4dkdvOmNd02Xach9FZCTY-d~ZcnY4~zbhUMJDPnjQdJlK4UadTP7gbdZ-5lAbyA5vRlXSd2~nWbAv805Kfpzde8ek56DSUE64Q__);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+.container-atrask h1{
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 90px;
+line-height: 113px;
+color: #FFFFFF;
+}
+.container-atrask h3{
+width: 457px;
+height: 45px;
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 300;
+font-size: 36px;
+line-height: 45px;
+color: #FFFFFF;
+}
+.container-atrask button{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 15px 34px;
+gap: 10px;
+width: 215px;
+height: 48px;
+background: linear-gradient(180deg, #00D4E4 -40.5%, #1F59EE 97.28%);
+border-radius: 24px;
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 13px;
+line-height: 18px;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.container-atrask .linija{
+    display: flex;
+    ali
+    justify-content:flex-end;
+}
+
