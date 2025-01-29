@@ -23,7 +23,7 @@ body{
     padding: 15px;
 }
 .container-atrask{
- height: 1000px;
+ height: 1100px;
     background-image: url(https://s3-alpha-sig.figma.com/img/3b43/b3ba/9fe8a2f8cbf05ee6d21002fe5d546eec?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HZYBNbRYnVHnaSPGG3TcSCC8cxeqHaVXHUonnfiyy2li~HfGrf3-2gYLQPdI7nNzol4IAZSFvZnJfwuCwixLsR0XGpptgTdEfk9TfxJ2XnEgFx15G7bLZx5I6VqvpMFQY4dOtjElYB56vAfAgM9PZRZtc67dgWE8xSmJIBe~XpCgCuTPDkiwV7pGugiNamtw4KhjoWIjZ7vNwgTt37zI8nJB7Tl~Wj2qLxjENhP~xV~CcAlBvjKy4dkdvOmNd02Xach9FZCTY-d~ZcnY4~zbhUMJDPnjQdJlK4UadTP7gbdZ-5lAbyA5vRlXSd2~nWbAv805Kfpzde8ek56DSUE64Q__);
     display: flex;
     flex-direction: column;
@@ -33,6 +33,7 @@ body{
 .container-atrask h1{
 font-family: 'Plus Jakarta Sans';
 font-style: normal;
+padding-top: 300px;
 font-weight: 700;
 font-size: 90px;
 line-height: 113px;
@@ -67,8 +68,40 @@ text-transform: uppercase;
 color: #FFFFFF;
 }
 .container-atrask .linija{
-    display: flex;
-    ali
-    justify-content:flex-end;
+    padding-left: 1300px;
+    padding-top:  220px;
+    /* display: flex;
+    justify-content:flex-end; */
 }
-
+.tekstas {
+    background: rgb(243, 243, 243);
+    display: flex;
+padding: 80px;
+gap: 20px;
+}
+.tekstas svg{
+  width: 10%;   
+}
+.lietuva{
+    background: rgb(243, 243, 243);
+    padding: 80px;
+    display: flex;
+    
+}
+.lietuva .foto{
+    display: flex;
+    justify-content: center;
+  
+}
+.lietuva .foto img{
+    /* padding-left: 800px; */
+    border-radius: 10px;
+    font-style: ;
+    /* width: 320px;
+    height: 440px; */
+}
+.lietuva .box{
+    background: white;
+    width: 40%;
+    padding-left: 50px;
+}
