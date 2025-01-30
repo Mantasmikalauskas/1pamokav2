@@ -29,6 +29,7 @@ body{
     background: rgba(52, 52, 248, 0.4);
     border: none;
    }
+   
    .hero .vidus{
     color: white;
     background: none; width: 563px; height: 198px; position: absolute; left: 100px; top: 300px;
@@ -39,8 +40,16 @@ body{
     height: 40px;
     border: none;
     color: white;
+    border-radius: 5px;
    }
-   .hero .vidus input
+   .hero .vidus input{
+   
+    width: 250px;
+    height: 40px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+   }
 
 
    .container{
@@ -61,7 +70,8 @@ body{
     align-items: center;
     gap: 20px;
     /* padding: 100px 80px 0 80px; */
-    padding-top: 100px;
+    padding-top: 200px;
+    padding-bottom: 50px;
    }
 
 
@@ -145,40 +155,58 @@ top: 1680px;
 background: url(calender);
 
    }
-
+    .task{
+            position: absolute;
+            width: 293.45px;
+            height: 189px;
+            left: 776px;
+            top: 800px;
+               }
 
    .mentors{
 position: absolute;
 width: 293.45px;
 height: 189px;
-left: 816px;
-top: 1060px;
+left: 780px;
+top: 1100px;
 border-radius: 8.28947px;
    }
    .dash{
     position: absolute;
     width: 293.45px;
     height: 189px;
-    left: 816px;
-    top: 960px;
+    left: 886px;
+    top: 860px;
     border-radius: 8.28947px;
        }
+       .send{
+        position: absolute;
+width: 293.45px;
+height: 189px;
+left: 1020px;
+top: 1100px;
+           }
+.calender{
+    position: absolute;
+    width: 293.45px;
+    height: 189px;
+    left: 366px;
+    top: 1600px;
+    border-radius: 8.28947px;  
+}
+.design{
+    position: absolute;
+    width: 143.45px;
+    height: 139px;
+    left: 186px;
+    top: 3500px;
+}
+.design img{
+    width: 150px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+       
 
 
 
