@@ -1,0 +1,94 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">  
+  </head>
+
+  <body>
+    <div id="pirmas">
+        <h1 id="pirma-antraste"> Pirma antraste</h1>
+        <p id="pirmas-paragrafas">Pirmas paragrafas</p>
+    </div>
+
+    <div id="antras">  
+        <p id="paragrafo-tekstas">Si tekstas turime matyti konsoleje</p>
+    </div>
+
+    <div id="trecias"> 
+        <p>Turime konsoleje matyti paragrafa arba tik teksta</p>
+    </div>
+
+    <div id="ketvirtas"> 
+        <button onclick="document.getElementById('paragrafas-pakeitimui').innerHTML = 'pakeistas paragrafo tekstas'">Pakeisti teksta</button>
+        <p id="paragrafas-pakeitimui">Nepakeistas paragrafo tekstas</p>
+    </div>
+
+    <div id="penktas"> 
+        <button onclick="document.getElementById('paragrafas-5').style.fontSize = '35px'">Pakeisti dydi</button>
+        <button onclick="document.getElementById('paragrafas-5').style.color = 'red'">Pakeisti spalva</button>
+        <p id="paragrafas-5">Penkto  paragrafo tekstas</p>
+    </div>
+
+    <div id="sestas"> 
+        <p> <img src="light-off.png" alt="" id="lempute"></p>
+        <button onclick="document.getElementById('lempute').src = 'light-on.png'">Pakeisti dydi</button>
+        <button onclick="document.getElementById('lempute').src = 'light-off.png'">Pakeisti spalva</button>   
+    </div>
+
+    <div id="septintas"> 
+        <button onclick="pakeisti()">Pakeisti teksta</button>
+        <p id="septinto-tekstas">Septinto paragrafo Nepakeistas paragrafo tekstas</p>
+    </div>
+
+    <div id="astuntas"> 
+        <button onclick="pakeisti2('astunto-tekstas', 'vienas du trys')">Pakeisti teksta 1</button>
+        <button onclick="pakeisti2('astunto-tekstas', 'batai kupranugaris')">Pakeisti teksta 2</button>
+        <button onclick="pakeisti2('astunto-tekstas', 'stalas kede medis')">Pakeisti teksta 3</button>
+        <button onclick="pakeisti2('astunto-tekstas', 'berzas obelis')">Pakeisti teksta 4</button>
+        <p id="astunto-tekstas">Astunto paragrafo Nepakeistas paragrafo tekstas</p>
+    </div>
+
+    <div id="desimtas">
+        <p id="suma"></p>
+        <p id="skirtumas"></p>
+        <p id="sandauga"></p>
+        <p id="dalmuo"></p>
+    </div>
+
+    <div id="tryliktas">
+        <div class="parametrai">
+            <div class="parametras">
+                <p>Plotis:</p>
+                <input type="range" min="100" max="500" value="100" id="plocio-slider">
+            </div>
+            <div class="parametras">
+                <p>Aukstis:</p>
+                <input type="range" min="100" max="500" value="100" id="aukscio-slider">
+            </div>
+            <div class="parametras">
+                <p>Spalva</p>
+                <select id="spalvos-pasirinkimas">
+                    <option value="burlywood">Burlywood</option>
+                    <option value="black">juoda</option>
+                    <option value="red">Raudona</option>
+                    <option value="green">Zalia</option>
+                </select>
+            </div>
+            <div class="parametras">
+                <p>Tekstas per viduri</p>
+                <input type="text" value="tekstas per viduri" id="tekstas-divui">
+            </div>
+        </div>
+        <div id="div-keitimui">
+            tekstas per viduri
+        </div>
+
+    </div>
+
+
+    <script src="index.js"></script>
+  </body>
+  </html>
