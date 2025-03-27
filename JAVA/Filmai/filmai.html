@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      .movies-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      .movie {
+        width: calc(20% - 15px);
+      }
+      .movie img {
+        width: 100%;
+      }
+      .movie p {
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="movie-name" onkeypress="onKeyPress(event)" />
+    <button onClick="loadMovies()">Krauti filmus</button>
+    <br />
+    <br />
+    <div class="filmai"></div>
+    <script src="filmai.js"></script>
+  </body>
+</html>
