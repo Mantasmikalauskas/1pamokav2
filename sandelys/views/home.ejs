@@ -1,0 +1,66 @@
+<%- include('partials/header'); -%>
+
+<h1 class="title">Prekių paieška sandėlyje</h1>
+
+<div id="homepage">
+  <h1>Paieška pagal kodą</h1>
+  <div id="paieska"></div>
+</div>
+
+<div id="homepage">
+  <h2>Redagavimas</h2>
+  <div id="redagavimas"></div>
+</div>
+
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://unpkg.com/react@15/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+
+<script type="text/babel">
+var Search = React.createClass({
+  getInitialState: function(){
+    return { id: '', result: null, error: null };
+  },
+
+  handleSearch: function(e){
+    e.preventDefault();
+    fetch('/api/items/' + this.state.id)
+      .then(res => {
+        if (!res.ok) throw new Error('Nerasta');
+        return res.json();
+      })
+      .then(data => this.setState({ result: data, error: null }))
+      .catch(err => this.setState({ error: err.message, result: null }));
+  },
+
+  render: function(){
+    return (
+      <div>
+        <form onSubmit={this.handleSearch}>
+          <input type="text" placeholder="Įveskite prekės ID"
+            value={this.state.id}
+            onChange={(e) => this.setState({ id: e.target.value })} required />
+          <button type="submit">Ieškoti</button>
+        </form>
+
+        {this.state.result &&
+          <div>
+            <h3>Rasta prekė:</h3>
+            <p>ID: {this.state.result.id}</p>
+            <p>Pavadinimas: {this.state.result.name}</p>
+            <p>Kaina: {this.state.result.price} €</p>
+            <p>Kiekis: {this.state.result.quantity}</p>
+          </div>
+        }
+
+        {this.state.error && <p style={{color:'red'}}>{this.state.error}</p>}
+      </div>
+    );
+  }
+});
+
+ReactDOM.render(<Search />, document.getElementById('paieska'));
+</script>
+
+<%- include('partials/footer'); -%>
+

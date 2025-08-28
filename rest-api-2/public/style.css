@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+
+body {
+    font-family: Raleway;
+    color: #333;
+    background: #c8e6c9; /* light green */
+    margin: 10px 30px;
+}
+
+/* Header & Footer */
+header, footer {
+    background: #2e7d32; /* darker green */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Login */
+#login-container {
+    max-width: 400px;
+    margin: 30px auto;
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+}
+#login-container input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+#login-container button {
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Content sections */
+#homepage {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f5f5f5; /* light grey */
+    border-radius: 4px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+    position: relative;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+/* Different logos as watermark */
+#homepage.audi {
+    background-image: url('/images/audi.png');
+}
+#homepage.vw {
+    background-image: url('/images/vw.png');
+}
+#homepage.bmw {
+    background-image: url('/images/bmw.png');
+}

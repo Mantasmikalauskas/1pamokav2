@@ -1,0 +1,79 @@
+[
+  {
+    "id": "10002",
+    "name": "Oro filtras",
+    "manufacturer": "Volkswagen",
+    "price": 25.5,
+    "quantity": 12
+  },
+  {
+    "id": "00001",
+    "name": "Padanga",
+    "manufacturer": "Kitaiska",
+    "price": 50.99,
+    "quantity": 5
+  },
+  {
+    "id": "12345",
+    "name": "zibintasdp",
+    "manufacturer": "Audi",
+    "price": 10,
+    "quantity": 1
+  },
+  {
+    "id": "12346",
+    "name": "Zibintas kp",
+    "manufacturer": "Audi ",
+    "price": 10,
+    "quantity": 1
+  },
+  {
+    "id": "00009",
+    "name": "Generatorius",
+    "manufacturer": "bmw",
+    "price": 100,
+    "quantity": 4
+  },
+  {
+    "id": "10202",
+    "name": "Oro filtras",
+    "manufacturer": "Volkswagen",
+    "price": 25.5,
+    "quantity": 12
+  },
+  {
+    "id": "00091",
+    "name": "Padanga",
+    "manufacturer": "Kitaiska",
+    "price": 50.99,
+    "quantity": 5
+  },
+  {
+    "id": "13548",
+    "name": "zibintasdp",
+    "manufacturer": "Audi",
+    "price": 10,
+    "quantity": 1
+  },
+  {
+    "id": "12000",
+    "name": "Zibintas kp",
+    "manufacturer": "bmw ",
+    "price": 10,
+    "quantity": 1
+  },
+  {
+    "id": "00011",
+    "name": "Generatorius",
+    "manufacturer": "audi",
+    "price": 100,
+    "quantity": 4
+  },
+  {
+    "id": "55226",
+    "name": "Varžtas",
+    "manufacturer": "bmw",
+    "price": 0.01,
+    "quantity": 1000
+  }
+]

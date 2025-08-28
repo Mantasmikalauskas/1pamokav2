@@ -1,0 +1,25 @@
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST API</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+    <h1>TIK ORIGINALIOS AUTODALYS</h1>
+</header>
+
+<!-- LOGIN FORM -->
+<div id="login-container">
+    <h2>Prisijungimas</h2>
+    <input type="text" id="username" placeholder="Vartotojas">
+    <input type="password" id="password" placeholder="Slaptažodis">
+    <button onclick="hideLogin()">Prisijungti</button>
+</div>
+
+<script>
+    function hideLogin() {
+        document.getElementById('login-container').style.display = 'none';
+    }
+</script>

@@ -1,0 +1,241 @@
+<%- include('partials/header'); -%>
+
+<h1 class="title">Programuotojai API</h1>
+<div id="homepage">
+    <h1>Surask programuotoją šalia savęs!</h1>
+    <div id="devs"></div>
+</div>
+
+<div id="homepage">
+    <h2>Redagavimas</h2>
+    <div id="redagavimas"></div>
+</div>
+
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://unpkg.com/react@15/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+
+<script type="text/babel">
+
+// ----------- SEARCH COMPONENT (still in #devs) -----------
+var Devs = React.createClass({
+    getInitialState: function(){
+        return({ devs: [] });
+    },
+
+    render: function() {
+        var devs = this.state.devs.map(function(dev, index) {
+            return (
+                <li key={index}>
+                    <span className={dev.laisvas ? 'free' : 'busy'}></span>
+                    <span className="name">{dev.vardas}</span>
+                    <span className="rank">{dev.tech.join(', ')}</span>
+                    <span className="dist">{Math.floor(dev.distance / 1000)} km</span>
+                    <span className="id">ID: {dev._id}</span>
+                </li>
+            );
+        });
+
+        return (
+            <div id="search-container">
+                <h3>Surask programuotoją šalia savęs</h3>
+                <form id="search" onSubmit={this.handleSearch}>
+                    <label>Ilguma:</label>
+                    <input type="number" ref="lng" placeholder="ilguma" required />
+                    <label>Platuma:</label>
+                    <input type="number" ref="lat" placeholder="platuma" required />
+                    <input type="submit" value="Rasti programuotojus" />
+                </form>
+                <ul>{devs}</ul>
+            </div>
+        );
+    },
+
+    handleSearch: function(e) {
+        e.preventDefault();
+        var lng = this.refs.lng.value;
+        var lat = this.refs.lat.value;
+
+        fetch('/api/programuotojai/?lng=' + lng + '&lat=' + lat)
+            .then(res => res.json())
+            .then(json => this.setState({ devs: json }))
+            .catch(err => console.error(err));
+    }
+});
+
+
+// ----------- MANAGEMENT COMPONENT (in #redagavimas) -----------
+var ManageDevs = React.createClass({
+    getInitialState: function(){
+        return({
+            // POST
+            vardas: '', tech: '', laisvas: true, lat: '', lng: '',
+            // PUT
+            editId: '', editName: '', editTech: '', editLaisvas: false, editLat: '', editLng: '',
+            // DELETE
+            deleteId: '',
+            // Dropdown
+            allDevs: []
+        });
+    },
+
+    componentDidMount: function() {
+        this.fetchAllDevs();
+    },
+
+    fetchAllDevs: function() {
+        fetch('/api/programuotojai/all')  // use same GET endpoint for all devs
+            .then(res => res.json())
+            .then(data => this.setState({ allDevs: data }))
+            .catch(err => console.error(err));
+    },
+
+    handleCreate: function(e) {
+        e.preventDefault();
+        const body = {
+            vardas: this.state.vardas,
+            tech: this.state.tech.split(',').map(t => t.trim()),
+            laisvas: this.state.laisvas,
+            location: { type: "Point", coordinates: [parseFloat(this.state.lng), parseFloat(this.state.lat)] }
+        };
+
+        fetch('/api/programuotojai', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body)
+        })
+        .then(res => res.json())
+        .then(newDev => {
+            alert("Pridėtas: " + newDev.vardas);
+            this.setState({ vardas: '', tech: '', laisvas: true, lat: '', lng: '' });
+            this.fetchAllDevs(); // refresh dropdown
+        })
+        .catch(err => console.error(err));
+    },
+
+    handleUpdate: function(e) {
+        e.preventDefault();
+        const body = {
+            vardas: this.state.editName,
+            tech: this.state.editTech.split(',').map(t => t.trim()),
+            laisvas: this.state.editLaisvas,
+            location: { type: "Point", coordinates: [parseFloat(this.state.editLng), parseFloat(this.state.editLat)] }
+        };
+
+        fetch('/api/programuotojai/' + this.state.editId, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body)
+        })
+        .then(res => res.json())
+        .then(updated => {
+            alert("Atnaujintas: " + updated.vardas);
+            this.setState({ editId: '', editName: '', editTech: '', editLaisvas: false, editLat: '', editLng: '' });
+            this.fetchAllDevs(); // refresh dropdown
+        })
+        .catch(err => console.error(err));
+    },
+
+    handleDelete: function(e) {
+        e.preventDefault();
+        fetch('/api/programuotojai/' + this.state.deleteId, { method: 'DELETE' })
+        .then(res => res.json())
+        .then(result => {
+            alert("Ištrintas programuotojas ID: " + this.state.deleteId);
+            this.setState({ deleteId: '' });
+            this.fetchAllDevs(); // refresh dropdown
+        })
+        .catch(err => console.error(err));
+    },
+
+    render: function() {
+        const dropdownOptions = this.state.allDevs.map(dev => (
+            <option key={dev._id} value={dev._id}>{dev.vardas}</option>
+        ));
+
+        return (
+            <div id="manage-container">
+                {/* POST */}
+                <h3>Pridėti naują programuotoją</h3>
+                <form onSubmit={this.handleCreate}>
+                    <input type="text" placeholder="Vardas"
+                        value={this.state.vardas}
+                        onChange={(e) => this.setState({ vardas: e.target.value })} required />
+                    <input type="text" placeholder="Tech (atskirk ,)"
+                        value={this.state.tech}
+                        onChange={(e) => this.setState({ tech: e.target.value })} required />
+                    <label>
+                        Laisvas:
+                        <input type="checkbox" checked={this.state.laisvas}
+                            onChange={(e) => this.setState({ laisvas: e.target.checked })} />
+                    </label>
+                    <input type="number" placeholder="Ilguma"
+                        value={this.state.lng}
+                        onChange={(e) => this.setState({ lng: e.target.value })} required />
+                    <input type="number" placeholder="Platuma"
+                        value={this.state.lat}
+                        onChange={(e) => this.setState({ lat: e.target.value })} required />
+                    <button type="submit">Pridėti</button>
+                </form>
+
+                <hr/>
+
+                {/* PUT */}
+                <h3>Redaguoti programuotoją</h3>
+                <form onSubmit={this.handleUpdate}>
+                    <input type="text" placeholder="Dev ID"
+                        value={this.state.editId}
+                        onChange={(e) => this.setState({ editId: e.target.value })} required />
+                    <input type="text" placeholder="Naujas vardas"
+                        value={this.state.editName}
+                        onChange={(e) => this.setState({ editName: e.target.value })} required />
+                    <input type="text" placeholder="Tech (atskirk ,)"
+                        value={this.state.editTech}
+                        onChange={(e) => this.setState({ editTech: e.target.value })} required />
+                    <label>
+                        Laisvas:
+                        <input type="checkbox" checked={this.state.editLaisvas}
+                            onChange={(e) => this.setState({ editLaisvas: e.target.checked })} />
+                    </label>
+                    <input type="number" placeholder="Ilguma"
+                        value={this.state.editLng}
+                        onChange={(e) => this.setState({ editLng: e.target.value })} required />
+                    <input type="number" placeholder="Platuma"
+                        value={this.state.editLat}
+                        onChange={(e) => this.setState({ editLat: e.target.value })} required />
+                    <button type="submit">Atnaujinti</button>
+                </form>
+
+                <hr/>
+
+                {/* DELETE */}
+                <h3>Ištrinti programuotoją</h3>
+                <form onSubmit={this.handleDelete}>
+                    <input type="text" placeholder="Dev ID"
+                        value={this.state.deleteId}
+                        onChange={(e) => this.setState({ deleteId: e.target.value })} required />
+                    <button type="submit">Ištrinti</button>
+                </form>
+
+                <hr/>
+
+                {/* Dropdown for all devs */}
+                <h3>Parodyti visą sąrašą</h3>
+                <select>
+                    <option value="">Pasirinkite programuotoją</option>
+                    {dropdownOptions}
+                </select>
+            </div>
+        );
+    }
+});
+
+ReactDOM.render(<Devs />, document.getElementById('devs'));
+ReactDOM.render(<ManageDevs />, document.getElementById('redagavimas'));
+
+</script>
+
+
+
+
+<%- include('partials/footer'); -%>

@@ -1,0 +1,5 @@
+[
+  { "id": "101", "name": "Monitorius", "price": 120, "quantity": 5 },
+  { "id": "102", "name": "Klaviatūra", "price": 25, "quantity": 12 },
+  { "id": "103", "name": "Pele", "price": 15, "quantity": 20 }
+]
